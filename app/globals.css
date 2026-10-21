@@ -1,0 +1,399 @@
+:root {
+  --green: #286800;
+  --green-active: #548b36;
+  --link: #4c9abd;
+  --text: #555;
+  --heading: #333;
+  --border: #e4e4e4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: #f7f3ec;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f7f3ec;
+  background-image: var(--site-background);
+  background-position: top left;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-open-sans), Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.58;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #e6b800;
+  outline-offset: 2px;
+}
+
+.site-shell {
+  display: flex;
+  width: min(1080px, 100%);
+  min-height: 720px;
+  margin: 0 auto 28px;
+  flex-direction: column;
+  background: #fff;
+  border-top: 3px solid var(--green);
+  box-shadow: 0 0 18px rgb(0 0 0 / 28%);
+}
+
+.site-header {
+  flex: none;
+}
+
+.site-brand {
+  display: flex;
+  min-height: 212px;
+  padding: 30px 35px;
+  align-items: center;
+  gap: 18px;
+  color: #111;
+  font-family: var(--font-oswald), "Arial Narrow", Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 300;
+  letter-spacing: -0.35px;
+  line-height: 1.2;
+}
+
+.site-brand:hover {
+  text-decoration: none;
+}
+
+.site-brand span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.site-logo {
+  width: 62px;
+  height: auto;
+  flex: none;
+}
+
+.site-navigation {
+  position: relative;
+  min-height: 49px;
+  background: var(--green);
+}
+
+.navigation-list {
+  display: flex;
+  margin: 0;
+  padding: 0 18px;
+  list-style: none;
+}
+
+.navigation-list li {
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-list a {
+  display: flex;
+  min-height: 49px;
+  padding: 0 22px;
+  align-items: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.navigation-list a:hover,
+.navigation-list a.is-current {
+  background: var(--green-active);
+  text-decoration: none;
+}
+
+.navigation-toggle {
+  display: none;
+}
+
+.site-main {
+  display: flex;
+  padding: 32px 33px 70px;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.page-card {
+  width: 100%;
+  min-width: 0;
+  padding: 26px 20px 38px;
+  background: #fff;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+.page-card.short-card {
+  min-height: 300px;
+}
+
+.page-card h1 {
+  margin: 0 0 30px;
+  color: var(--heading);
+  font-family: var(--font-oswald), "Arial Narrow", Arial, sans-serif;
+  font-size: 31px;
+  font-weight: 300;
+  letter-spacing: -0.25px;
+  line-height: 1.25;
+}
+
+.page-content > :first-child {
+  margin-top: 0;
+}
+
+.page-content > :last-child {
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer {
+  min-height: 52px;
+  padding: 17px 33px;
+  flex: none;
+  background: var(--green);
+  color: rgb(255 255 255 / 55%);
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.circuit-challenges {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.circuit-challenges li {
+  margin: 0 0 27px;
+  padding-left: 0;
+}
+
+.circuit-challenges li:last-child {
+  margin-bottom: 0;
+}
+
+.circuit-challenges p {
+  margin: 0 0 18px;
+}
+
+.circuit-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.portrait {
+  display: block;
+  width: 360px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 28px;
+}
+
+.biography-card p:last-child {
+  margin-bottom: 0;
+}
+
+.course-list {
+  line-height: 1.55;
+}
+
+.related-links li {
+  margin-bottom: 24px;
+}
+
+.contact-card address {
+  font-style: normal;
+}
+
+.contact-card address a {
+  color: inherit;
+}
+
+.student-groups section {
+  margin-top: 24px;
+}
+
+.student-groups h2,
+.publication-section h2 {
+  margin: 0 0 2px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: inherit;
+}
+
+.student-groups li {
+  line-height: 1.55;
+}
+
+.publications-card {
+  padding-bottom: 42px;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+.publication-section {
+  margin-bottom: 29px;
+}
+
+.publication-list li {
+  margin-bottom: 13px;
+}
+
+.news-list li {
+  margin-bottom: 11px;
+}
+
+@media (max-width: 840px) {
+  .site-brand {
+    min-height: 175px;
+    padding: 25px 28px;
+    font-size: 28px;
+  }
+
+  .navigation-list {
+    padding-left: 8px;
+  }
+
+  .navigation-list a {
+    padding: 0 14px;
+    font-size: 11px;
+  }
+
+  .site-main {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-shell {
+    min-height: 100vh;
+    margin-bottom: 0;
+    box-shadow: none;
+  }
+
+  .site-brand {
+    min-height: 140px;
+    padding: 20px;
+    gap: 14px;
+    font-size: clamp(23px, 7vw, 29px);
+  }
+
+  .site-logo {
+    width: 54px;
+  }
+
+  .site-navigation {
+    min-height: 48px;
+  }
+
+  .navigation-toggle {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;
+    background: var(--green);
+    color: #fff;
+    cursor: pointer;
+    font: 700 12px/1 var(--font-open-sans), Arial, sans-serif;
+    text-transform: uppercase;
+  }
+
+  .navigation-toggle-icon {
+    display: grid;
+    width: 22px;
+    gap: 4px;
+  }
+
+  .navigation-toggle-icon i {
+    display: block;
+    height: 2px;
+    background: currentColor;
+  }
+
+  .navigation-list {
+    display: none;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .navigation-list.is-open {
+    display: flex;
+  }
+
+  .navigation-list a {
+    min-height: 44px;
+    padding: 0 20px;
+    border-top: 1px solid rgb(255 255 255 / 13%);
+  }
+
+  .site-main {
+    padding: 22px 16px 42px;
+  }
+
+  .page-card,
+  .page-card.short-card {
+    min-height: 0;
+    padding: 18px 17px 30px;
+  }
+
+  .page-card h1 {
+    margin-bottom: 21px;
+    font-size: 28px;
+  }
+
+  .site-footer {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .publications-card {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
